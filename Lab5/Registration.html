@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Admission Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff7043;
+        }
+        
+        .container {
+            width: 40%;
+            margin: 30px auto;
+            background-color: #0000cc;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 5px dashed #000000;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ff7043;
+            font-size: 1.5em;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], input[type="date"], 
+        textarea, select {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn, .reset-btn {
+            display: inline-block;
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 15px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        .reset-btn {
+            background-color: #d32f2f;
+        }
+
+        .submit-btn:hover, .reset-btn:hover {
+            background-color: #ff5722;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admission Registration 2022-23</h1>
+        <h2>Student Registration Form</h2>
+        <form>
+            <label for="first-name">First Name: <span>(Max 50 Characters Allowed)</span></label>
+            <input type="text" id="first-name" name="first-name" maxlength="50" required />
+
+            <label for="last-name">Last Name: <span>(Max 50 Characters Allowed)</span></label>
+            <input type="text" id="last-name" name="last-name" maxlength="50" required />
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mobile">Mobile Number: <span>(10 Digits Allowed)</span></label>
+            <input type="text" id="mobile" name="mobile" maxlength="10" required />
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required /> Male
+            <input type="radio" id="female" name="gender" value="Female" required /> Female
+
+            <label for="dob">Date of Birth (DOB):</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" maxlength="200" required></textarea>
+
+            <label for="city">City: <span>(Max 50 Characters Allowed)</span></label>
+            <input type="text" id="city" name="city" maxlength="50" required />
+
+            <label for="pincode">Pin Code: <span>(Max 6 Numbers Allowed)</span></label>
+            <input type="text" id="pincode" name="pincode" maxlength="6" required />
+
+            <label for="state">State: <span>(Max 50 Characters Allowed)</span></label>
+            <input type="text" id="state" name="state" maxlength="50" required />
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="India">India</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="hobbies">Hobbies:</label>
+            <input type="checkbox" name="hobbies" value="Drawing" /> Drawing
+            <input type="checkbox" name="hobbies" value="Singing" /> Singing
+            <input type="checkbox" name="hobbies" value="Dancing" /> Dancing
+            <input type="checkbox" name="hobbies" value="Sketching" /> Sketching
+            <input type="checkbox" name="hobbies" value="Others" /> Others <input type="text" name="other-hobby" placeholder="Specify" maxlength="50" />
+
+            <label for="qualification">Qualification:</label>
+            <input type="checkbox" name="qualification" value="High School (10th)" /> High School (10th)
+            <input type="checkbox" name="qualification" value="Higher School (12th)" /> Higher School (12th)
+            <input type="checkbox" name="qualification" value="Graduation (Bachelors)" /> Graduation (Bachelors)
+            <input type="checkbox" name="qualification" value="Post Graduation (Masters)" /> Post Graduation (Masters)
+
+            <label for="courses">Courses Applied For:</label>
+            <select id="courses" name="courses" required>
+                <option value="BCA">BCA/Bachelor of Computer Applications</option>
+                <option value="MCA">MCA/Master of Computer Applications</option>
+            </select>
+
+            <div style="text-align: center;">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
